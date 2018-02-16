@@ -1,0 +1,54 @@
+{
+  "name": "react-oembed-container",
+  "version": "0.0.1",
+  "description": "React container for locating and injecting oembed scripts in string content.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint .",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/humanmade/react-oembed-container.git"
+  },
+  "keywords": [
+    "React",
+    "oEmbed"
+  ],
+  "contributors": [
+    "K. Adam White",
+    "Human Made"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/humanmade/react-oembed-container/issues"
+  },
+  "homepage": "https://github.com/humanmade/react-oembed-container#readme",
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.3.13",
+    "@storybook/addon-links": "^3.3.13",
+    "@storybook/addons": "^3.3.13",
+    "@storybook/react": "^3.3.13",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.2.2",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.12.1",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1",
+    "jest": "^22.3.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "regenerator-runtime": "^0.11.1"
+  }
+}

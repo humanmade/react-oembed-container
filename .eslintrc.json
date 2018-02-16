@@ -1,0 +1,19 @@
+{
+  "extends": "airbnb",
+  "plugins": [
+    "jest"
+  ],
+  "env": {
+    "jest/globals": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": [ "off" ],
+    "import/no-extraneous-dependencies": [ "error", {
+      "devDependencies": ["**/*.test.js", ".storybook/**/*.js", "stories/**/*.js"]
+    } ],
+    "jest/consistent-test-it": "error",
+    "jest/no-disabled-tests": "error",
+    "jest/valid-expect": "error",
+    "jest/valid-expect-in-promise": "error"
+  }
+}
