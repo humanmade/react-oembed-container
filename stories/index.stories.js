@@ -2,7 +2,7 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import * as fixtures from '../src/test-fixtures';
+import * as fixtures from '../test/fixtures';
 
 import EmbedContainer from '../src/index';
 
