@@ -1,2 +1,1 @@
-# Exclude built files.
-build/
+dist/

@@ -74,4 +74,4 @@ render() {
 
 Run `npm install` to pull down the dependencies for local development. Linting with ESLint is handled through `npm run lint`, and the Jest tests are run with `npm test`.
 
-To work on this component, either `npm link` it into another project or else run `npm run storybook` to spin up a [Storybook](https://storybook.js.org/) UI development environment. This environment should be available locally at [localhost:6006](http://localhost:6006).
+To work on this component, either use [`npm link`](https://docs.npmjs.com/cli/link) to bring it into another project for testing or else run `npm run storybook` within this repository to spin up a [Storybook](https://storybook.js.org/) UI development environment. This environment should be available locally at [localhost:6006](http://localhost:6006).
