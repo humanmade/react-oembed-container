@@ -59,7 +59,10 @@ export const getScriptTags = (string) => {
   return scripts ? uniqueURIs(scripts.map(extractScriptURL)) : [];
 };
 
-// Dictionary of URIs to treat with custom handling rules
+// Dictionary of overrides to customize the handling of certain scripts;
+// most scripts are designed to execute onload, but the better-documented
+// oEmbed scripts (such as Facebook's) can be manually re-initialized in
+// a predictable manner.
 const embeds = {
   'connect.facebook.net': {
     isLoaded() {
@@ -113,7 +116,7 @@ class EmbedContainer extends Component {
     } else {
       const scriptTag = document.createElement('script');
       scriptTag.src = src;
-      container.appendChild(scriptTag);
+      document.head.appendChild(scriptTag);
       return scriptTag;
     }
     return null;
