@@ -82,10 +82,17 @@ const embeds = {
   },
 };
 
+const getEmbedConfiguration = src => Object.keys(embeds)
+  .reduce((matchingEmbed, key) => (
+    matchingEmbed || (src.indexOf(key) > -1 && embeds[key]) || null
+  ), null);
+
 class EmbedContainer extends Component {
   componentDidMount() {
     const { markup } = this.props;
-    this.scripts = getScriptTags(markup).map(src => this.injectScript(src));
+    this.scripts = getScriptTags(markup)
+      .map(src => this.injectScript(src))
+      .filter(Boolean);
   }
 
   shouldComponentUpdate(nextProps) {
@@ -100,10 +107,16 @@ class EmbedContainer extends Component {
    */
   injectScript(src) {
     const { container } = this;
-    const scriptTag = document.createElement('script');
-    scriptTag.src = src;
-    container.appendChild(scriptTag);
-    return scriptTag;
+    const embed = getEmbedConfiguration(src);
+    if (embed && embed.isLoaded()) {
+      embed.reload(container);
+    } else {
+      const scriptTag = document.createElement('script');
+      scriptTag.src = src;
+      container.appendChild(scriptTag);
+      return scriptTag;
+    }
+    return null;
   }
 
   render() {
