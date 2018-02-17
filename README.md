@@ -10,17 +10,49 @@ Post content however may _also_ include `<script>` tags, which have no effect wh
 
 This issue is particularly noticeable when dealing with [**oEmbed**](https://oembed.com/)ded content, such as embedded Twitter or Facebook posts. Because many of these social media providers return `<script>` tags as part of their oEmbed response, WordPress will produce post content HTML which works fine when loaded from an application backend but which will not properly display embedded social content when rendered from React.
 
-These oEmbed HTML responses may either contain script tags with `src` attributes pointing at 
+For example, WordPress will let you paste in a URL like `https://twitter.com/reactjs/status/964689022747475968` to the editor, then via an oEmbed request will convert it to the following rendered markup:
+
+```html
+<blockquote class=\"twitter-tweet\" data-width=\"525\" data-dnt=\"true\">
+<p lang=\"en\" dir=\"ltr\">We&#39;re relicensing React Native (including Fresco, Metro, and Yoga) under the MIT license to match React. <a href=\"https://t.co/Ypg7ozX958\">https://t.co/Ypg7ozX958</a></p>
+<p>&mdash; React (@reactjs) <a href=\"https://twitter.com/reactjs/status/964689022747475968?ref_src=twsrc%5Etfw\">February 17, 2018</a></p></blockquote>
+<p><script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script></p>
+```
+
+These oEmbed HTML responses may not contain any scripts. If so, great! React can render that easily. But if they do, they will either contain script tags with `src` attributes pointing at an external JavaScript file (as in the twitter example above), or else an inline `<script>` tag with code that will create & inject a script into the DOM of the page as in Facebook's example:
+
+```html
+<div id=\"fb-root\"></div>
+<p><script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script></p>
+<div class=\"fb-post\" 
+```
+
+In order to properly display inlined oEmbed content, we need to detect and inject both types of scripts.
+
+## A Note on Security
+
+Technically what we're doing here is permitting arbitrary scripts injected into API responses to be rendered on the front-end of your site: under certain circumstances this can pose a security risk. However, these scripts would be rendered normally when loading this same markup from the server in a more traditional CMS-driven webpage rendering context.
+
+It is up to the CMS to ensure that any scripts which make it far enough to be output on the page (or in API responses) are properly whitelisted or sanitized as necessary. Using WordPress as an example, only the responses from whitelisted oEmbed providers or content from highly authorized users may contain scripts at all; we therefore assume that any scripts inlined within the returned content are integral to the rendering of that content and should be loaded accordingly.
 
 ## Usage
 
 Import the container element into your React component:
+
 ```js
 import SocialEmbedContainer from 'react-oembed-container';
 ```
-(or `OEmbedContainer` if you prefer; "oEmbed" uses a lowercase O, while React components traditionally use uppercase identifiers.)
+(or another name such as `OEmbedContainer` if you prefer; this README choses to sidestep the irreconcilable conflict between oEmbed's use of a lowercase "o" and React components' traditionally uppercase identifiers.)
 
-Then use this container to wrap whatever components you would normally use to render the markup:
+Then use this container to wrap whatever JSX you would normally use to render the content:
 ```js
 render() {
   const { post } = this.props;
