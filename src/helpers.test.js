@@ -1,11 +1,11 @@
-import * as fixtures from './fixtures';
+import * as fixtures from './test-fixtures';
 
 import {
   ANY_SCRIPT,
   EXTERNAL_SCRIPT,
   INJECTED_SCRIPT,
   getScriptTags,
-} from '../index';
+} from './helpers';
 
 describe('Script Detection Regular Expressions', () => {
   const noScriptTag = 'String with no script tag';

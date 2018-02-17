@@ -2,9 +2,9 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import * as fixtures from '../tests/fixtures';
+import * as fixtures from '../src/test-fixtures';
 
-import EmbedContainer from '../index';
+import EmbedContainer from '../src/index';
 
 /* eslint-disable react/no-danger */
 const testEmbedContainerWith = markup => (
