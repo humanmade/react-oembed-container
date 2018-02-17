@@ -9,7 +9,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "babel src -d dist",
-    "release": "npm run lint && npm run build && npm publish"
+    "prerelease": "npm run lint && npm run test",
+    "release": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",

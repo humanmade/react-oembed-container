@@ -43,6 +43,18 @@ Technically what we're doing here is permitting arbitrary scripts injected into 
 
 It is up to the CMS to ensure that any scripts which make it far enough to be output on the page (or in API responses) are properly whitelisted or sanitized as necessary. Using WordPress as an example, only the responses from whitelisted oEmbed providers or content from highly authorized users may contain scripts at all; we therefore assume that any scripts inlined within the returned content are integral to the rendering of that content and should be loaded accordingly.
 
+## Installation
+
+```
+npm install --save react-oembed-container
+```
+
+This library has peerdependencies on `react-dom` and `react` v16. If you do not already have these in your project, run
+
+```
+npm install --save react react-dom
+```
+
 ## Usage
 
 Import the container element into your React component:
