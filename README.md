@@ -2,6 +2,8 @@
 
 This package provides a React component wrapper to handle detecting and injecting script tags within HTML string content.
 
+[![Build Status](https://travis-ci.org/humanmade/react-oembed-container.svg?branch=master)](https://travis-ci.org/humanmade/react-oembed-container)
+
 ## Background
 
 Content management system API endpoints like those in WordPress often return editorial content as HTML strings rather than structured data. `dangerouslySetInnerHTML` is required to properly render this HTML content within a React application, or else any markup embedded in that string will not display properly.
