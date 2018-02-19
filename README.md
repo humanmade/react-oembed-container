@@ -60,16 +60,16 @@ npm install --save react react-dom
 Import the container element into your React component:
 
 ```js
-import SocialEmbedContainer from 'react-oembed-container';
+import EmbedContainer from 'react-oembed-container';
 ```
-(or another name such as `OEmbedContainer` if you prefer; this README choses to sidestep the irreconcilable conflict between oEmbed's use of a lowercase "o" and React components' traditionally uppercase identifiers.)
 
 Then use this container to wrap whatever JSX you would normally use to render the content:
+
 ```js
 render() {
   const { post } = this.props;
   return (
-    <SocialEmbedContainer markup={post.content.rendered}>
+    <EmbedContainer markup={post.content.rendered}>
 
       {/* for example, */}
       <article id={`post-${post.id}`}>
@@ -77,9 +77,29 @@ render() {
         <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
       </article>
 
-    </SocialEmbedContainer>
+    </EmbedContainer>
   );
 }
+```
+
+If you set a `className` on the `EmbedContainer` component, that class will be passed through to the rendered `<div>` container:
+
+```js
+render() {
+  const { post } = this.props;
+  return (
+    <EmbedContainer
+      className="article-content"
+      markup={post.content.rendered}
+    >
+      <p>Article text here</p>
+    </EmbedContainer>
+  );
+}
+```
+yields
+```html
+<div class="article-content"><p>Article text here</p></div>
 ```
 
 ## Local Development
