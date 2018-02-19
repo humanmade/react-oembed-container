@@ -51,7 +51,20 @@ const uniqueURIs = scripts => Object.keys(scripts.reduce((keys, script) => (
  * @param {String} string String containing HTML markup which may include script tags.
  * @returns {String[]} Array of any script URIs we believe to be loaded in this HTML.
  */
-export const getScriptTags = (string) => {
+export const getScripts = (string) => {
   const scripts = string.match(/<script[\s\S]*?<\/script>/gi);
   return scripts ? uniqueURIs(scripts.map(extractScriptURL)) : [];
+};
+
+/**
+ * Create & inject a new <script> tag into the page.
+ *
+ * @param {String} src A script URL.
+ * @returns {HTMLElement} The injected script tag.
+ */
+export const injectScriptTag = (src) => {
+  const scriptTag = document.createElement('script');
+  scriptTag.src = src;
+  document.head.appendChild(scriptTag);
+  return scriptTag;
 };

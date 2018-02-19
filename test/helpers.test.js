@@ -4,7 +4,7 @@ import {
   ANY_SCRIPT,
   EXTERNAL_SCRIPT,
   INJECTED_SCRIPT,
-  getScriptTags,
+  getScripts,
 } from '../src/helpers';
 
 describe('Script Detection Regular Expressions', () => {
@@ -80,23 +80,23 @@ describe('Script Detection Regular Expressions', () => {
   });
 });
 
-describe('script tag locator', () => {
+describe('getScripts', () => {
   it('should identify script tags in content', () => {
-    const result = getScriptTags(fixtures.twitter);
+    const result = getScripts(fixtures.twitter);
     expect(Array.isArray(result)).toBe(true);
     expect(result.length).toBe(1);
     expect(result[0]).toBe('https://platform.twitter.com/widgets.js');
   });
 
   it('should de-dupe repeated script tags', () => {
-    const result = getScriptTags(fixtures.facebook);
+    const result = getScripts(fixtures.facebook);
     expect(Array.isArray(result)).toBe(true);
     expect(result.length).toBe(1);
     expect(result[0]).toBe('https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12');
   });
 
   it('should be able to match multiple different script tags', () => {
-    const result = getScriptTags(fixtures.all);
+    const result = getScripts(fixtures.all);
     expect(Array.isArray(result)).toBe(true);
     expect(result).toEqual([
       'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12',

@@ -29,6 +29,9 @@
     "url": "https://github.com/humanmade/react-oembed-container/issues"
   },
   "homepage": "https://github.com/humanmade/react-oembed-container#readme",
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/test/setup.js"
+  },
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
@@ -47,6 +50,8 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.6.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.17.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
