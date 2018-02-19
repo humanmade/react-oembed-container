@@ -22,6 +22,15 @@ describe('Social Embed Container', () => {
     expect(container.html()).toBe('<div>String <code>HTML</code> Content</div>');
   });
 
+  it('Should pass through any provided className', () => {
+    const container = mount((
+      <EmbedContainer markup="String <code>HTML</code> Content" className="test classes">
+        String <code>HTML</code> Content
+      </EmbedContainer>
+    ));
+    expect(container.html()).toBe('<div class="test classes">String <code>HTML</code> Content</div>');
+  });
+
   it('should enqueue any detected script tag', () => {
     mount((
       <EmbedContainer markup={`
