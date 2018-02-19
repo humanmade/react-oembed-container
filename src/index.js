@@ -34,22 +34,34 @@ class EmbedContainer extends Component {
   }
 
   render() {
-    const { children, markup } = this.props;
+    const {
+      children,
+      className,
+      markup,
+    } = this.props;
     markup.split(' ').join(' ');
     return (
-      <div ref={(node) => { this.container = node; }}>
+      <div
+        className={className}
+        ref={(node) => { this.container = node; }}
+      >
         {children}
       </div>
     );
   }
 }
 
+EmbedContainer.defaultProps = {
+  className: null,
+};
+
 EmbedContainer.propTypes = {
-  markup: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
   ]).isRequired,
+  className: PropTypes.string,
+  markup: PropTypes.string.isRequired,
 };
 
 export default EmbedContainer;
