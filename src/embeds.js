@@ -4,6 +4,9 @@
  * Most scripts are designed to execute onload, but the better-documented
  * oEmbed scripts (such as Facebook's) can be manually re-initialized in
  * a predictable manner.
+ *
+ * The keys of this object are substrings that will be matched against
+ * any detected script tag URLs.
  */
 const embeds = {
   'connect.facebook.net': {
@@ -24,6 +27,14 @@ const embeds = {
       return window.FB !== undefined;
     },
     reload: container => window.FB.XFBML.parse(container),
+  },
+  'instagram.com': {
+    isLoaded: () => window.instgrm !== undefined,
+    reload: () => window.instgrm.Embeds.process(),
+  },
+  'twitter.com': {
+    isLoaded: () => window.twttr !== undefined,
+    reload: () => window.twttr.widgets.load(),
   },
 };
 
