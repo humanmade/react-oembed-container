@@ -15,16 +15,16 @@ This issue is particularly noticeable when dealing with [**oEmbed**](https://oem
 For example, WordPress will let you paste in a URL like `https://twitter.com/reactjs/status/964689022747475968` to the editor, then via an oEmbed request will convert it to the following rendered markup:
 
 ```html
-<blockquote class=\"twitter-tweet\" data-width=\"525\" data-dnt=\"true\">
-<p lang=\"en\" dir=\"ltr\">We&#39;re relicensing React Native (including Fresco, Metro, and Yoga) under the MIT license to match React. <a href=\"https://t.co/Ypg7ozX958\">https://t.co/Ypg7ozX958</a></p>
-<p>&mdash; React (@reactjs) <a href=\"https://twitter.com/reactjs/status/964689022747475968?ref_src=twsrc%5Etfw\">February 17, 2018</a></p></blockquote>
-<p><script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script></p>
+<blockquote class="twitter-tweet" data-width="525" data-dnt="true">
+<p lang="en" dir="ltr">We&#39;re relicensing React Native (including Fresco, Metro, and Yoga) under the MIT license to match React. <a href="https://t.co/Ypg7ozX958">https://t.co/Ypg7ozX958</a></p>
+<p>&mdash; React (@reactjs) <a href="https://twitter.com/reactjs/status/964689022747475968?ref_src=twsrc%5Etfw">February 17, 2018</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 ```
 
 These oEmbed HTML responses may not contain any scripts. If so, great! React can render that easily. But if they do, they will either contain script tags with `src` attributes pointing at an external JavaScript file (as in the twitter example above), or else an inline `<script>` tag with code that will create & inject a script into the DOM of the page as in Facebook's example:
 
 ```html
-<div id=\"fb-root\"></div>
+<div id="fb-root"></div>
 <p><script>
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -34,7 +34,6 @@ These oEmbed HTML responses may not contain any scripts. If so, great! React can
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 </script></p>
-<div class=\"fb-post\" 
 ```
 
 In order to properly display inlined oEmbed content, we need to detect and inject both types of scripts.
