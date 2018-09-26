@@ -15,12 +15,12 @@ const embeds = {
       if (!document.querySelector('body > #fb-root')) {
         // There may be multiple #fb-root elements in a post's content: remove them
         // all in favor of a new body-level div.
-        [...document.querySelectorAll('#fb-root')].forEach(n => n.remove());
+        [...document.querySelectorAll('#fb-root')].forEach(n => n.parentNode.removeChild(n));
 
         // Prepare and create the fb-root element. We only need one.
         const fbDiv = document.createElement('div');
         fbDiv.id = 'fb-root';
-        document.body.prepend(fbDiv);
+        document.body.appendChild(fbDiv);
       }
 
       // Now the root element the script requires exists, check for the script iself.
