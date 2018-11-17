@@ -39,7 +39,6 @@ class EmbedContainer extends Component {
       className,
       markup,
     } = this.props;
-    markup.split(' ').join(' ');
     return (
       <div
         className={className}
