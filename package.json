@@ -16,6 +16,7 @@
     "type": "git",
     "url": "git+https://github.com:APMG/apm-enceladus.git"
   },
+  "preinstall" : "npm run build",
   "keywords": [
     "React",
     "oEmbed"
