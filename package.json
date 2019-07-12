@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com:APMG/apm-enceladus.git"
+    "url": "git+https:/github.com:APMG/react-oembed-container.git"
   },
   "postinstall" : "npm run build",
   "keywords": [
