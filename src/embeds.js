@@ -9,7 +9,7 @@
  * any detected script tag URLs.
  */
 const embeds = {
-	'connect.facebook.net': {
+	'connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12': {
 		isLoaded() {
 			// Ensure FB root element
 			if ( ! document.querySelector( 'body > #fb-root' ) ) {

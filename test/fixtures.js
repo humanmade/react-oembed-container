@@ -29,6 +29,28 @@ Posted by <a href="https://www.facebook.com/react/">React</a> on Tuesday, March 
 
 `;
 
+export const facebookV2 = `<h2>Facebook</h2>
+<div id="fb-root"></div>
+<p><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script></p>
+<div class="fb-video" data-href="https://www.facebook.com/react/videos/930567940354947/" data-width="525">
+<blockquote cite="https://www.facebook.com/react/videos/930567940354947/" class="fb-xfbml-parse-ignore"><p><a href="https://www.facebook.com/react/videos/930567940354947/"></a></p>
+<p>ReactConf 2016 &#8211; Nick SchrockKeynote</p>
+<p>Posted by <a href="https://www.facebook.com/react/">React</a> on Tuesday, March 1, 2016</p></blockquote>
+</div>
+<div id="fb-root"></div>
+<p><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script></p>
+<div class="fb-post" data-href="https://www.facebook.com/react/photos/pb.460906303987782.-2207520000.1518799872./477783955633350/?type=3" data-width="525">
+<blockquote cite="https://www.facebook.com/react/photos/a.460907020654377.1073741824.460906303987782/477783955633350/?type=3" class="fb-xfbml-parse-ignore"><p>Posted by <a href="https://www.facebook.com/react/">React</a> on&nbsp;<a href="https://www.facebook.com/react/photos/a.460907020654377.1073741824.460906303987782/477783955633350/?type=3">Sunday, July 14, 2013</a></p></blockquote>
+</div>
+<div id="fb-root"></div>
+<p><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script></p>
+<div class="fb-post" data-href="https://www.facebook.com/react/posts/1152063088205430" data-width="525">
+<blockquote cite="https://www.facebook.com/react/posts/1152063088205430" class="fb-xfbml-parse-ignore">
+<p>Dan Abramov explains all you ever wanted to know about React Fiber, the soon to be complete full rewrite of React internalshttps://www.youtube.com/watch?v=crM1iRVGpGQ</p>
+<p>Posted by <a href="https://www.facebook.com/react/">React</a> on&nbsp;<a href="https://www.facebook.com/react/posts/1152063088205430">Thursday, December 15, 2016</a></p></blockquote>
+</div>
+`;
+
 export const twitter = `<h2>Twitter</h2>
 <blockquote class="twitter-tweet" data-width="525" data-dnt="true">
 <p lang="en" dir="ltr"><a href="https://t.co/oGBBWZALr0">https://t.co/oGBBWZALr0</a></p>
@@ -167,7 +189,8 @@ export const collegehumor = `<h2>CollegeHumor</h2>
 `;
 
 export const all = [
-	facebook,
+  facebook,
+  facebookV2,
 	twitter,
 	wordpress,
 	youtube,

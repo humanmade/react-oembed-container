@@ -16,7 +16,8 @@ const testEmbedContainerWith = ( markup ) => (
 
 storiesOf( 'EmbedContainer', module )
 	.add( 'All Embeds At Once', () => testEmbedContainerWith( fixtures.all ) )
-	.add( 'Facebook', () => testEmbedContainerWith( fixtures.facebook ) )
+	.add( 'Facebook v6', () => testEmbedContainerWith( fixtures.facebook ) )
+	.add( 'Facebook v2.12', () => testEmbedContainerWith( fixtures.facebookV2 ) )
 	.add( 'Twitter', () => testEmbedContainerWith( fixtures.twitter ) )
 	.add( 'WordPress', () => testEmbedContainerWith( fixtures.wordpress ) )
 	.add( 'YouTube', () => testEmbedContainerWith( fixtures.youtube ) )
