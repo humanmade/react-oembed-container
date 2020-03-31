@@ -8,10 +8,10 @@ export const INJECTED_SCRIPT = /<script[\s\S]*?>[\s\S]*?createElement[\s\S]*?src
  * @param {String} script The string HTML of a <script> tag.
  * @returns {String|null} The URI of the requested external script, otherwise null.
  */
-const extractExternalScriptURL = (script) => {
-  const match = script.match(EXTERNAL_SCRIPT);
-  // Return null if no match, otherwise return the second capture group.
-  return match && match[2];
+const extractExternalScriptURL = ( script ) => {
+	const match = script.match( EXTERNAL_SCRIPT );
+	// Return null if no match, otherwise return the second capture group.
+	return match && match[2];
 };
 
 /**
@@ -20,10 +20,10 @@ const extractExternalScriptURL = (script) => {
  * @param {String} script The string HTML of a <script> tag.
  * @returns {String|null} The URI of a script being injected from inline JS, otherwise null.
  */
-const extractInjectedScriptURL = (script) => {
-  const match = script.match(INJECTED_SCRIPT);
-  // Return null if no match, otherwise return the second capture group.
-  return match && match[2];
+const extractInjectedScriptURL = ( script ) => {
+	const match = script.match( INJECTED_SCRIPT );
+	// Return null if no match, otherwise return the second capture group.
+	return match && match[2];
 };
 
 /**
@@ -32,8 +32,8 @@ const extractInjectedScriptURL = (script) => {
  * @param {String} script The string HTML of a <script> tag
  * @returns {String|null} The URI of the script file this script tag loads, or null.
  */
-const extractScriptURL = script => (
-  extractExternalScriptURL(script) || extractInjectedScriptURL(script)
+const extractScriptURL = ( script ) => (
+	extractExternalScriptURL( script ) || extractInjectedScriptURL( script )
 );
 
 /**
@@ -41,9 +41,12 @@ const extractScriptURL = script => (
  *
  * @param {String[]} Array script file URIs.
  */
-const uniqueURIs = scripts => Object.keys(scripts.reduce((keys, script) => (
-  script ? { ...keys, [script]: true } : keys
-), {}));
+const uniqueURIs = ( scripts ) => Object.keys( scripts.reduce( ( keys, script ) => (
+	script ? {
+		...keys,
+		[script]: true,
+	} : keys
+), {} ) );
 
 /**
  * Parse a string of HTML and identify the JS files loaded by any contained script tags.
@@ -51,9 +54,9 @@ const uniqueURIs = scripts => Object.keys(scripts.reduce((keys, script) => (
  * @param {String} string String containing HTML markup which may include script tags.
  * @returns {String[]} Array of any script URIs we believe to be loaded in this HTML.
  */
-export const getScripts = (string) => {
-  const scripts = string.match(/<script[\s\S]*?<\/script>/gi);
-  return scripts ? uniqueURIs(scripts.map(extractScriptURL)) : [];
+export const getScripts = ( string ) => {
+	const scripts = string.match( /<script[\s\S]*?<\/script>/gi );
+	return scripts ? uniqueURIs( scripts.map( extractScriptURL ) ) : [];
 };
 
 /**
@@ -62,9 +65,9 @@ export const getScripts = (string) => {
  * @param {String} src A script URL.
  * @returns {HTMLElement} The injected script tag.
  */
-export const injectScriptTag = (src) => {
-  const scriptTag = document.createElement('script');
-  scriptTag.src = src;
-  document.head.appendChild(scriptTag);
-  return scriptTag;
+export const injectScriptTag = ( src ) => {
+	const scriptTag = document.createElement( 'script' );
+	scriptTag.src = src;
+	document.head.appendChild( scriptTag );
+	return scriptTag;
 };
