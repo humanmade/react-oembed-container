@@ -168,11 +168,6 @@ export const trello = `<h2>Trello</h2>
 <script src="https://p.trellocdn.com/embed.min.js"></script>
 `;
 
-export const collegehumor = `<h2>CollegeHumor</h2>
-<p><iframe src="http://www.collegehumor.com/e/40000012" width="525" height="296" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe></p>
-<p>&nbsp;</p>
-`;
-
 export const all = [
 	facebook,
 	twitter,
@@ -192,5 +187,4 @@ export const all = [
 	issuu,
 	flickr,
 	trello,
-	collegehumor,
 ].join( '\n\n' );
