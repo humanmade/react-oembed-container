@@ -1,0 +1,11 @@
+remote_theme: pmarsceill/just-the-docs
+
+title: oEmbedContainer
+description: A React component wrapper to handle detecting and injecting script tags within HTML string content.
+
+# Auxiary navigation links to display in the the upper right corner
+aux_links:
+  "Human Made":
+    - "//humanmade.com"
+  "react-oembed-container on GitHub":
+    - "//github.com/humanmade/react-oembed-container"

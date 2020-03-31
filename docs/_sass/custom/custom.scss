@@ -1,0 +1,86 @@
+// Don't nowrap links in post content.
+.main-content .page-content a {
+	white-space: normal;
+}
+
+// Lists should remain bulleted.
+.main-content .page-content ul {
+	list-style: initial;
+}
+
+// Adjust the colors of the ```diff fenced code blocks to make removed lines red.
+.language-diff .highlight {
+	.gd {
+		color: #af2b2b;
+	}
+}
+
+$hm-red: #d24632;
+$link-color: $hm-red;
+$sidebar-color: $hm-red;
+$nav-child-link-color: #737373;
+$nav-child-link-color: white;
+$grey-dk-000: white;
+
+.site-title,
+.navigation-list-link,
+.navigation-list-link.active {
+	color: white !important;
+}
+
+.navigation-list-child-list .navigation-list-item::before,
+.navigation-list-child-list .navigation-list-item.active::before {
+	color: #e3e3e3 !important;
+}
+.site-title {
+	white-space: nowrap;
+}
+.side-bar .btn-outline {
+	color: white !important;
+}
+.site-header .menu-button {
+	color: white;
+}
+
+.site-footer {
+	background-color: $hm-red;
+	color: white;
+	a {
+		color: white;
+	}
+}
+
+.search-result.active,
+.search-result:hover {
+	&,
+	.search-result-preview,
+	.search-result-rel-url {
+		color: white;
+
+		.search-result-highlight {
+			color: white;
+		}
+	}
+}
+.search .search-icon {
+	fill: $hm-red;
+}
+
+// GH and HM links in the dropdown header.
+@media (max-width: 799px ) {
+	.page-header a {
+		color: white;
+	}
+
+	.search-result {
+		.search-result-title {
+			color: $hm-red;
+		}
+		&.active,
+		&:hover {
+			.search-result-title {
+				color: white;
+			}
+		}
+	}
+}
