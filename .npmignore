@@ -1,6 +1,6 @@
-.babelrc
 .editorconfig
 .eslintignore
-.eslintrc.json
+.eslintrc.js
+docs/
 lib/
 package-lock.json
