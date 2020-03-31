@@ -168,6 +168,12 @@ export const trello = `<h2>Trello</h2>
 <script src="https://p.trellocdn.com/embed.min.js"></script>
 `;
 
+export const twitch = `<h2>Twitch</h2>
+
+<iframe src="https://player.twitch.tv/?channel=boilerroom" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+<a href="https://www.twitch.tv/boilerroom?tt_content=text_link&tt_medium=live_embed" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">Watch live video from BoilerRoom on www.twitch.tv</a>
+`;
+
 export const all = [
 	facebook,
 	twitter,
@@ -187,4 +193,5 @@ export const all = [
 	issuu,
 	flickr,
 	trello,
+	twitch,
 ].join( '\n\n' );
