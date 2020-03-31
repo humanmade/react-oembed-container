@@ -1,23 +1,32 @@
 export const facebook = `<h2>Facebook</h2>
+
+<figure class="wp-block-embed-facebook wp-block-embed is-type-rich is-provider-facebook">
+<div class="wp-block-embed__wrapper">
 <div id="fb-root"></div>
-<p><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script></p>
-<div class="fb-video" data-href="https://www.facebook.com/react/videos/930567940354947/" data-width="525">
-<blockquote cite="https://www.facebook.com/react/videos/930567940354947/" class="fb-xfbml-parse-ignore"><p><a href="https://www.facebook.com/react/videos/930567940354947/"></a></p>
+<script async="1" defer="1" crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v6.0"></script>
+<div class="fb-post" data-href="https://www.facebook.com/WordPress/posts/10157864027952911" data-width="580">
+<blockquote cite="https://www.facebook.com/WordPress/posts/10157864027952911" class="fb-xfbml-parse-ignore">
+<p>February 2020 was a busy month in the WordPress project! Most notably, there was an outpouring of sentiment in response&#8230;</p>
+Posted by <a href="https://www.facebook.com/WordPress/">WordPress</a> on&nbsp;<a href="https://www.facebook.com/WordPress/posts/10157864027952911">Monday, March 2, 2020</a>
+</blockquote>
+</div>
+</div>
+</figure>
+
+<figure class="wp-block-embed-facebook wp-block-embed is-type-video is-provider-facebook">
+<div class="wp-block-embed__wrapper">
+<div id="fb-root"></div>
+<script async="1" defer="1" crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v6.0"></script>
+<div class="fb-video" data-href="https://www.facebook.com/react/videos/930567940354947/" data-width="580">
+<blockquote cite="https://www.facebook.com/react/videos/930567940354947/" class="fb-xfbml-parse-ignore">
+<a href="https://www.facebook.com/react/videos/930567940354947/"></a>
 <p>ReactConf 2016 &#8211; Nick SchrockKeynote</p>
-<p>Posted by <a href="https://www.facebook.com/react/">React</a> on Tuesday, March 1, 2016</p></blockquote>
+Posted by <a href="https://www.facebook.com/react/">React</a> on Tuesday, March 1, 2016
+</blockquote>
 </div>
-<div id="fb-root"></div>
-<p><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script></p>
-<div class="fb-post" data-href="https://www.facebook.com/react/photos/pb.460906303987782.-2207520000.1518799872./477783955633350/?type=3" data-width="525">
-<blockquote cite="https://www.facebook.com/react/photos/a.460907020654377.1073741824.460906303987782/477783955633350/?type=3" class="fb-xfbml-parse-ignore"><p>Posted by <a href="https://www.facebook.com/react/">React</a> on&nbsp;<a href="https://www.facebook.com/react/photos/a.460907020654377.1073741824.460906303987782/477783955633350/?type=3">Sunday, July 14, 2013</a></p></blockquote>
 </div>
-<div id="fb-root"></div>
-<p><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script></p>
-<div class="fb-post" data-href="https://www.facebook.com/react/posts/1152063088205430" data-width="525">
-<blockquote cite="https://www.facebook.com/react/posts/1152063088205430" class="fb-xfbml-parse-ignore">
-<p>Dan Abramov explains all you ever wanted to know about React Fiber, the soon to be complete full rewrite of React internalshttps://www.youtube.com/watch?v=crM1iRVGpGQ</p>
-<p>Posted by <a href="https://www.facebook.com/react/">React</a> on&nbsp;<a href="https://www.facebook.com/react/posts/1152063088205430">Thursday, December 15, 2016</a></p></blockquote>
-</div>
+</figure>
+
 `;
 
 export const twitter = `<h2>Twitter</h2>
