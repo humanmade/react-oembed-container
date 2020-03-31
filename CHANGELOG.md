@@ -3,6 +3,7 @@
 ## v0.4.0 
 
 - Added support for Trello [#14](https://github.com/humanmade/react-oembed-container/pull/14) (You may use [this plugin](https://github.com/humanmade/trello-embeds) to enable Trello card embeds on your WordPress site)
+- Added a test case for Twitch.tv [#16](https://github.com/humanmade/react-oembed-container/pull/16)
 - Removed CollegeHumor test cases (RIP) [#15](https://github.com/humanmade/react-oembed-container/pull/15)
 - Added [docs website](https://humanmade.github.io/react-oembed-container)
 - Update Twitter embed `isLoaded` check to fix undefined reference issue, props @ghankerson [#10](https://github.com/humanmade/react-oembed-container/pull/10), [#11](https://github.com/humanmade/react-oembed-container/pull/11)
