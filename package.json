@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint .",
-    "storybook": "start-storybook -p 6006",
+		"storybook": "start-storybook -p 6006",
+		"prebuild-storybook": "rm -rf docs/storybook",
     "build-storybook": "build-storybook -o docs/storybook",
     "build": "babel src -d dist",
     "prerelease": "npm run lint && npm run test",

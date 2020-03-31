@@ -1,5 +1,7 @@
 export const facebook = `<h2>Facebook</h2>
 
+(Not working? Check your ad blocker extensions or Brave shield!)
+
 <figure class="wp-block-embed-facebook wp-block-embed is-type-rich is-provider-facebook">
 <div class="wp-block-embed__wrapper">
 <div id="fb-root"></div>
