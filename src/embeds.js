@@ -33,7 +33,7 @@ const embeds = {
     reload: () => window.instgrm.Embeds.process(),
   },
   'twitter.com': {
-    isLoaded: () => window.twttr !== undefined,
+    isLoaded: () => window.twttr !== undefined && window.twttr.widgets !== undefined,
     reload: () => window.twttr.widgets.load(),
   },
 };
