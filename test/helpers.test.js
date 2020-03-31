@@ -91,15 +91,18 @@ describe( 'getScripts', () => {
 	it( 'should de-dupe repeated script tags', () => {
 		const result = getScripts( fixtures.facebook );
 		expect( Array.isArray( result ) ).toBe( true );
-		expect( result.length ).toBe( 1 );
-		expect( result[0] ).toBe( 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0' );
+		expect( result.length ).toBe( 2 );
+		expect( result ).toEqual( [
+			'https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v6.0',
+			'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12',
+		] );
 	} );
 
 	it( 'should be able to match multiple different script tags', () => {
 		const result = getScripts( fixtures.all );
 		expect( Array.isArray( result ) ).toBe( true );
 		expect( result ).toEqual( [
-			'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0',
+			'https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v6.0',
 			'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12',
 			'https://platform.twitter.com/widgets.js',
 			'https://assets.tumblr.com/post.js',

@@ -27,9 +27,8 @@ Posted by <a href="https://www.facebook.com/react/">React</a> on Tuesday, March 
 </div>
 </figure>
 
-`;
+<h3>FB SDK v2.12 embeds</h3>
 
-export const facebookV2 = `<h2>Facebook</h2>
 <div id="fb-root"></div>
 <p><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script></p>
 <div class="fb-video" data-href="https://www.facebook.com/react/videos/930567940354947/" data-width="525">
@@ -189,8 +188,7 @@ export const collegehumor = `<h2>CollegeHumor</h2>
 `;
 
 export const all = [
-  facebook,
-  facebookV2,
+	facebook,
 	twitter,
 	wordpress,
 	youtube,
