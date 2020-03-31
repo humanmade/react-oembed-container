@@ -91,10 +91,9 @@ describe( 'getScripts', () => {
 	it( 'should de-dupe repeated script tags', () => {
 		const result = getScripts( fixtures.facebook );
 		expect( Array.isArray( result ) ).toBe( true );
-		expect( result.length ).toBe( 2 );
+		expect( result.length ).toBe( 1 );
 		expect( result ).toEqual( [
 			'https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v6.0',
-			'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12',
 		] );
 	} );
 
@@ -103,7 +102,6 @@ describe( 'getScripts', () => {
 		expect( Array.isArray( result ) ).toBe( true );
 		expect( result ).toEqual( [
 			'https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v6.0',
-			'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12',
 			'https://platform.twitter.com/widgets.js',
 			'https://assets.tumblr.com/post.js',
 			'//www.instagram.com/embed.js',
