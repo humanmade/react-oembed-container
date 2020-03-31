@@ -108,6 +108,7 @@ describe( 'getScripts', () => {
 			'https://embed.redditmedia.com/widgets/platform.js',
 			'https://v0.wordpress.com/js/next/videopress-iframe.js?m=1435166243',
 			'//e.issuu.com/embed.js',
+			'https://p.trellocdn.com/embed.min.js',
 		] );
 	} );
 } );
