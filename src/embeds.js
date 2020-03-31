@@ -36,6 +36,13 @@ const embeds = {
 		isLoaded: () => window.twttr !== undefined && window.twttr.widgets !== undefined,
 		reload: () => window.twttr.widgets.load(),
 	},
+	'trellocdn.com': {
+		isLoaded: () => window.TrelloCards !== undefined && window.TrelloCards.load !== undefined,
+		reload: () => window.TrelloCards.load( document, {
+			compact: false,
+			allAnchors: false,
+		} ),
+	},
 };
 
 /**
