@@ -8,6 +8,7 @@ nav_order: 10
 
 ## v0.4.0 
 
+- Added [docs website](https://humanmade.github.io/react-oembed-container)
 - Update Twitter embed `isLoaded` check to fix undefined reference issue, props @ghankerson [#10](https://github.com/humanmade/react-oembed-container/pull/10), [#11](https://github.com/humanmade/react-oembed-container/pull/11)
 - Adjust DOM method usage to support legacy IE11 environments [#7](https://github.com/humanmade/react-oembed-container/pull/7)
 - Remove useless code, props @koenpunt [#8](https://github.com/humanmade/react-oembed-container/pull/8)
