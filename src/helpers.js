@@ -67,7 +67,8 @@ export const getScripts = ( string ) => {
  */
 export const injectScriptTag = ( src ) => {
 	const scriptTag = document.createElement( 'script' );
-	scriptTag.src = src;
+	// Workaround for HTML-encoded entities in URI (relevant to Facebook)
+	scriptTag.src = src.replace( '&amp;', '&' );
 	document.head.appendChild( scriptTag );
 	return scriptTag;
 };
