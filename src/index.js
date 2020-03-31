@@ -37,7 +37,6 @@ class EmbedContainer extends Component {
     const {
       children,
       className,
-      markup,
     } = this.props;
     return (
       <div
