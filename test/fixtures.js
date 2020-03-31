@@ -1,7 +1,5 @@
 export const facebook = `<h2>Facebook</h2>
 
-(Not working? Check your ad blocker extensions or Brave shield!)
-
 <figure class="wp-block-embed-facebook wp-block-embed is-type-rich is-provider-facebook">
 <div class="wp-block-embed__wrapper">
 <div id="fb-root"></div>
@@ -162,6 +160,14 @@ export const flickr = `<h2>Flickr</h2>
 <p><a href="https://www.flickr.com/photos/kadamwhite/21958804054/"><img src="https://farm1.staticflickr.com/621/21958804054_af2a347efa.jpg" alt="Quincy Market Autumn" width="500" height="370" /></a></p>
 `;
 
+export const trello = `<h2>Trello</h2>
+
+<blockquote class="trello-card">
+<a href="https://trello.com/c/XryMRaxw/14-hi-read-me-first">Hi! Read me first!</a>
+</blockquote>
+<script src="https://p.trellocdn.com/embed.min.js"></script>
+`;
+
 export const collegehumor = `<h2>CollegeHumor</h2>
 <p><iframe src="http://www.collegehumor.com/e/40000012" width="525" height="296" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe></p>
 <p>&nbsp;</p>
@@ -185,5 +191,6 @@ export const all = [
 	wordpresstv,
 	issuu,
 	flickr,
+	trello,
 	collegehumor,
 ].join( '\n\n' );
