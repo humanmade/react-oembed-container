@@ -30,9 +30,15 @@
   },
   "homepage": "https://github.com/humanmade/react-oembed-container#readme",
   "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/test/setup.js",
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setup.js"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
     "testURL": "http://localhost/"
   },
+  "browserslist": "> 0.25%, not dead",
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
@@ -41,16 +47,16 @@
     "prop-types": "^15.6.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.0",
+    "@babel/plugin-transform-react-jsx": "^7.9.4",
     "@storybook/addon-actions": "^3.3.13",
     "@storybook/addon-links": "^3.3.13",
     "@storybook/addons": "^3.3.13",
     "@storybook/react": "^5.3.18",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^25.2.4",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
