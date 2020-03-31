@@ -33,5 +33,4 @@ storiesOf( 'EmbedContainer', module )
 	.add( 'WordPress.tv', () => testEmbedContainerWith( fixtures.wordpresstv ) )
 	.add( 'Issuu', () => testEmbedContainerWith( fixtures.issuu ) )
 	.add( 'Flickr', () => testEmbedContainerWith( fixtures.flickr ) )
-	.add( 'Trello', () => testEmbedContainerWith( fixtures.trello ) )
-	.add( 'CollegeHumor', () => testEmbedContainerWith( fixtures.collegehumor ) );
+	.add( 'Trello', () => testEmbedContainerWith( fixtures.trello ) );
