@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.1
+
+- Permit installation alongside React 17 [#18](https://github.com/humanmade/react-oembed-container/pull/18)
+
 ## v1.0.0
 
 - Added support for Trello [#14](https://github.com/humanmade/react-oembed-container/pull/14) (You may use [this plugin](https://github.com/humanmade/trello-embeds) to enable Trello card embeds on your WordPress site)

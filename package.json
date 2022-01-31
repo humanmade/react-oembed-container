@@ -1,13 +1,13 @@
 {
   "name": "react-oembed-container",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React container for locating and injecting oembed scripts in string content.",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint .",
-		"storybook": "start-storybook -p 6006",
-		"prebuild-storybook": "rm -rf docs/storybook",
+    "storybook": "start-storybook -p 6006",
+    "prebuild-storybook": "rm -rf docs/storybook",
     "build-storybook": "build-storybook -o docs/storybook",
     "build": "babel src -d dist",
     "prerelease": "npm run lint && npm run test",
